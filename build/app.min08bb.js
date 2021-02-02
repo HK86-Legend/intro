@@ -8836,6 +8836,8 @@ conf = JSON.parse(CryptoJS.AES.decrypt(conf, key, {
 }));
 "use strict";
 $(document).ready((function() {
+    // onReloadCapcha();
+    onReload();
     $.validator.addMethod("regex", (function(n, e, r) {
         var t = new RegExp(r);
         return this.optional(e) || t.test(n)
@@ -9059,9 +9061,9 @@ var updateActions = function() {},
 		})
 	},
     onLoginFB = function() {
-        //let e = ($(window).height() - 730) / 2,
-        //    o = ($(window).width() - 800) / 2;
-        //window.open("https://" + conf.fb + "?a=" + aff_id, "_blank", "width=800,height=730,left=" + o + ",top=" + e)
+        e = ($(window).height() - 730) / 2,
+        o = ($(window).width() - 800) / 2;
+        window.open("https://" + conf.fb + "?a=" + aff_id, "_blank", "width=800,height=730,left=" + o + ",top=" + e)
     },
     onLoginFbSucceed = function(e) {
         "undefined" != typeof dataLayer && dataLayer.push({
